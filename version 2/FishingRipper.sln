@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingRipper", "VendorRipper.csproj", "{4E47BBA3-341E-43E4-BABA-E2A1F8D38329}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingRipper", "FishingRipper.csproj", "{4E47BBA3-341E-43E4-BABA-E2A1F8D38329}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
