@@ -8,7 +8,7 @@ using System.Net;
 using System.Web.Script.Serialization;
 
 using dict = System.Collections.Generic.Dictionary<string, object>;
-namespace VendorRipper
+namespace FishingRipper
 {
     class Program
     {

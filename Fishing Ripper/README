@@ -1,1 +1,1 @@
-Generates an sql update with items sold by an npc with specific ID by parsing wowhead.
+Generates an sql update with fishing nodes and item counts.
