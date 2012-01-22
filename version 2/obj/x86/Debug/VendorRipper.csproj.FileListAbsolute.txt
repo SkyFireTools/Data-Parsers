@@ -1,0 +1,6 @@
+H:\Tools\VendorRipper\bin\Debug\VendorRipper.exe.config
+H:\Tools\VendorRipper\bin\Debug\VendorRipper.exe
+H:\Tools\VendorRipper\bin\Debug\VendorRipper.pdb
+H:\Tools\VendorRipper\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\Tools\VendorRipper\obj\x86\Debug\VendorRipper.exe
+H:\Tools\VendorRipper\obj\x86\Debug\VendorRipper.pdb
