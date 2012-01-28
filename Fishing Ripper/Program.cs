@@ -19,7 +19,7 @@ namespace WowHeadRipper
             string m_readString;
             uint m_type;
             uint m_id;
-            uint m_totalCount = 0;
+            uint m_totalCount = 1;
             string m_url;
             string[] m_id_name = new string[] { "Zone", "Creature", "Gameobject", "Item" };
             string[] m_id_type = new string[] { "Fishing", "Creature", "Gameobject", "Item" };
@@ -82,7 +82,7 @@ namespace WowHeadRipper
             if (m_type == 1)
             {
                 r = new Regex(@"new Listview\(\{template: 'item', id: 'drops'.*data: (\[.+\])\}\);");
-                r2 = new Regex(@"new Listview\(\{template: 'item', id: 'drops'.*_totalCount:");
+                r2 = new Regex(@"new Listview\(\{template: 'item', id: 'drops'.*computeDataFunc:");
             }
             if (m_type == 2)
             {
@@ -102,7 +102,7 @@ namespace WowHeadRipper
                 {
                     string str = m2.Groups[0].Captures[0].Value;
                     string[] numbers = Regex.Split(str, @"\D+");
-                    if (m_type != 1)
+                    if (m_type != 1 || m_type != 3)
                         m_totalCount = uint.Parse(numbers[2]);
                     else
                         m_totalCount = uint.Parse(numbers[1]);
