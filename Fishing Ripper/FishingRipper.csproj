@@ -8,8 +8,8 @@
     <ProjectGuid>{4E47BBA3-341E-43E4-BABA-E2A1F8D38329}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FishingRipper</RootNamespace>
-    <AssemblyName>FishingRipper</AssemblyName>
+    <RootNamespace>WowHeadRipper</RootNamespace>
+    <AssemblyName>WowHeadRipper</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>FishingRipper.Program</StartupObject>
+    <StartupObject>WowHeadRipper.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
