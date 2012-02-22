@@ -24,7 +24,7 @@ namespace WowHeadRipper
             string[] m_id_name = new string[] { "Zone", "Creature", "Gameobject", "Item" };
             string[] m_id_type = new string[] { "Fishing", "Creature", "Gameobject", "Item" };
             string[] m_id_raw_name = new string[] { "zone", "npc", "object", "item" };
-            string[] m_id_DB_name = new string[] { "Fishing_loot_template", "Creature_loot_template", "Gameobject_loot_template", "Item_loot_template"};
+            string[] m_id_DB_name = new string[] { "Fishing_loot_template", "Creature_loot_template", "Gameobject_loot_template", "Item_loot_template" };
             Console.WriteLine("Welcome to SkyFire data parser");
             StreamWriter file = File.CreateText("loot.sql");
         menu:
@@ -86,8 +86,8 @@ namespace WowHeadRipper
             }
             if (m_type == 2)
             {
-                r = new Regex(@"new Listview\(\{template: 'item', id: 'mining'.*data: (\[.+\])\}\);");
-                r2 = new Regex(@"new Listview\(\{template: 'item', id: 'mining'.*_totalCount:");
+                r = new Regex(@"new Listview\(\{template: 'item', id: 'contains'.*data: (\[.+\])\}\);");
+                r2 = new Regex(@"new Listview\(\{template: 'item', id: 'contains'.*_totalCount:");
             }
             if (m_type == 3)
             {
@@ -102,10 +102,7 @@ namespace WowHeadRipper
                 {
                     string str = m2.Groups[0].Captures[0].Value;
                     string[] numbers = Regex.Split(str, @"\D+");
-                    if (m_type != 1 || m_type != 3)
-                        m_totalCount = uint.Parse(numbers[2]);
-                    else
-                        m_totalCount = uint.Parse(numbers[1]);
+                    m_totalCount = uint.Parse(numbers[1]);
                 }
                 if (!m.Success)
                 {
@@ -145,15 +142,15 @@ namespace WowHeadRipper
                         strpct = strpct.Replace(",", ".");
                         file.WriteLine("INSERT INTO `{0}` VALUES ( '{1}', '{2}', '{3}', '{4}', '{5}', '{6}' , '{7}'); -- {8}",
                         m_id_DB_name[m_type], m_id, id, strpct, 1, lootmode, mincount, maxcount, name);
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine(e.Message);
-                        }
                     }
-                    // should have only one data line
-                    break;
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
                 }
+                // should have only one data line
+                break;
+            }
             Console.WriteLine();
             Console.WriteLine("Sucessfully parsed {0}: {1}", m_id_name[m_type], m_id);
             Console.WriteLine();
