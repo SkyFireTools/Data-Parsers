@@ -8,8 +8,8 @@
     <ProjectGuid>{4E47BBA3-341E-43E4-BABA-E2A1F8D38329}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WowHeadRipper</RootNamespace>
-    <AssemblyName>WowHeadRipper</AssemblyName>
+    <RootNamespace>WowHeadLootRipper</RootNamespace>
+    <AssemblyName>WowHeadLootRipper</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
