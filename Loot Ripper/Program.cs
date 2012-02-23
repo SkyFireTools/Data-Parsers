@@ -24,7 +24,7 @@ namespace WowHeadRipper
             string[] m_id_name = new string[] { "Zone", "Creature", "Gameobject", "Item" };
             string[] m_id_type = new string[] { "Fishing", "Creature", "Gameobject", "Item" };
             string[] m_id_raw_name = new string[] { "zone", "npc", "object", "item" };
-            string[] m_id_DB_name = new string[] { "Fishing_loot_template", "Creature_loot_template", "Gameobject_loot_template", "Item_loot_template" };
+            string[] m_id_DB_name = new string[] { "fishing_loot_template", "creature_loot_template", "gameobject_loot_template", "item_loot_template" };
             Console.WriteLine("Welcome to SkyFire data parser");
             StreamWriter file = File.CreateText("loot.sql");
         menu:
@@ -109,7 +109,7 @@ namespace WowHeadRipper
                     continue;
                 }
                 file.WriteLine("-- Parsed {0} loot for {1} id : {2} ", m_id_type[m_type], m_id_name[m_type], m_id);
-                file.WriteLine("DELETE FROM `{0}` WHERE `Entry` = {1}", m_id_DB_name[m_type], m_id);
+                file.WriteLine("DELETE FROM `{0}` WHERE `Entry` = {1} ;", m_id_DB_name[m_type], m_id);
                 file.WriteLine();
                 var json = new JavaScriptSerializer() { MaxJsonLength = int.MaxValue };
                 string data = m.Groups[1].Captures[0].Value;
